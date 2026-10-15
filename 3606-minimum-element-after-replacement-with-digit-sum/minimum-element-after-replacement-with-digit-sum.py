@@ -1,17 +1,10 @@
 class Solution:
     def minElement(self, nums: List[int]) -> int:
-        #result=[]
-        mini=float('inf')
+        result = []
         for num in nums:
-            digit=0
-            while num>0:
-                digit+=num%10
-                num=num//10
-            if digit<mini:
-                mini=digit
-        return mini
-   
-
-
-
-        
+            digit = 0
+            while num > 0:
+                digit += num % 10
+                num = num // 10
+            result.append(digit)
+        return min(result)
