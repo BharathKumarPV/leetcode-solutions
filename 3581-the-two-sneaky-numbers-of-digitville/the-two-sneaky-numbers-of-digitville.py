@@ -2,10 +2,10 @@ class Solution:
     def getSneakyNumbers(self, nums: List[int]) -> List[int]:
         s = set()
         result = []
-        for i in range(len(nums)):
-            if nums[i] in s:
-                result.append(nums[i])
+        for num in nums:
+            if num in s:
+                result.append(num)
             else:
-                s.add(nums[i])
+                s.add(num)
         return result
         
